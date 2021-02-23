@@ -27,7 +27,7 @@ public class OTPRequest {
 //
 //    }
     
-  public func OTPRequestAPI(userId:String,GCIF:String,mobileNumber:String)
+  public func OTPRequestAPI(userId:String,GCIF:String,mobileNumber:String)-> Void
     {
 //    self.userId = userId
 //    self.GCIF = GCIF

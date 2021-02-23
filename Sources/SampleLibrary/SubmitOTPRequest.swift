@@ -26,7 +26,7 @@ class SubmitOTPRequest:NSObject
     //
     //    }
         
-  public func submitOTPAPI(userId:String,GCIF:String,otp:String)
+  public func submitOTPAPI(userId:String,GCIF:String,otp:String) -> Void
        
         {
 //        self.userId = userId
