@@ -9,12 +9,13 @@
 import Foundation
 struct SubmitOTPResponse: Codable, CustomStringConvertible {
     var secKey: String?
-    //var mobileNumber: String?
+    var mobileNumber: String?
     var defString = String(stringLiteral: "")
     
     var description: String {
         return """
         secKey = \(secKey ?? defString)
+        mobieNumber = \(mobileNumber ?? defString)
         """
     }
 

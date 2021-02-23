@@ -9,9 +9,9 @@ import Foundation
 
 class SubmitOTPRequest:NSObject
 {
-//    public let userId: String
-//    public let GCIF: String
-//    public let otp :String
+    public let userId: String
+    public let GCIF: String
+    public let otp :String
    // public var mobileNumber:String
 
         let rest = RestManager()
@@ -26,12 +26,12 @@ class SubmitOTPRequest:NSObject
     //
     //    }
         
-  public func submitOTPAPI(userId:String,GCIF:String,otp:String) -> Void
+  public init (userId:String,GCIF:String,otp:String)
        
         {
-//        self.userId = userId
-//        self.GCIF = GCIF
-//        self.otp = otp
+        self.userId = userId
+        self.GCIF = GCIF
+        self.otp = otp
             guard let url = URL(string:  APIConstants.BASEURL+"/submitotp") else { return }
             
             rest.requestHttpHeaders.add(value: "application/json", forKey: "Content-Type")
@@ -48,14 +48,14 @@ class SubmitOTPRequest:NSObject
                    }
                     self.sumbitResponse = otpResponse
                     print(self.sumbitResponse.description)
-                    //self.email = otpResult.email ?? ""
-                    //self.mobileNumber = otpResult.mobileNumber ?? ""
+//                    self.email = sumbitResponse.email ?? ""
+//                    self.mobileNumber = sumbitResponse.mobileNumber ?? ""
                    
                    
                 }
             }
             
-          return
+          
         }
         
 
