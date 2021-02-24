@@ -10,10 +10,10 @@ import Foundation
 
 public class OTPRequest {
     
-    public let userId: String
-    public let GCIF: String
-//    public var email:String
-    public let mobileNumber:String
+//    public let userId: String
+//    public let GCIF: String
+////    public var email:String
+//    public let mobileNumber:String
 
     let rest = RestManager()
     var otpResult = OTPResponse()
@@ -27,13 +27,13 @@ public class OTPRequest {
 //
 //    }
     
-  public init (userId:String,GCIF:String,mobileNumber:String)
+   func otpAPI(userId:String,GCIF:String,mobileNumber:String) -> OTPResponse
     {
-    self.userId = userId
-    self.GCIF = GCIF
-    self.mobileNumber = mobileNumber
-        
-    guard let url = URL(string: APIConstants.BASEURL+"/userverification") else { return }
+//    self.userId = userId
+//    self.GCIF = GCIF
+//    self.mobileNumber = mobileNumber
+       
+    let url = URL(string: APIConstants.BASEURL+"/userverification")!
         
         rest.requestHttpHeaders.add(value: "application/json", forKey: "Content-Type")
         rest.httpBodyParameters.add(value: userId, forKey: "userId")
@@ -55,9 +55,10 @@ public class OTPRequest {
                
             }
         }
-        
+    return self.otpResult
        
     }
+    
     
 
 }

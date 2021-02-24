@@ -7,9 +7,8 @@
 
 import UIKit
 import Foundation
-import NVActivityIndicatorView
 
-class ConnectionManager{
+public class ConnectionManager{
 
 public func getPostString(params:[String:Any]) -> String
 
