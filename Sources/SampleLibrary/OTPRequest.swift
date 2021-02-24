@@ -27,7 +27,7 @@ public class OTPRequest {
 //
 //    }
     
-   func otpAPI(userId:String,GCIF:String,mobileNumber:String) -> OTPResponse
+   public func otpAPI(userId:String,GCIF:String,mobileNumber:String)
     {
 //    self.userId = userId
 //    self.GCIF = GCIF
@@ -55,7 +55,7 @@ public class OTPRequest {
                
             }
         }
-    return self.otpResult
+    
        
     }
     

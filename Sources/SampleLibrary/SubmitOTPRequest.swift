@@ -26,7 +26,7 @@ public class SubmitOTPRequest
     //
     //    }
         
-    func submitOTPAPI(userId:String,GCIF:String,otp:String) -> SubmitOTPResponse
+    public func submitOTPAPI(userId:String,GCIF:String,otp:String)
       {
 //      self.userId = userId
 //      self.GCIF = GCIF
@@ -55,7 +55,7 @@ public class SubmitOTPRequest
                  
               }
           }
-        return self.sumbitResponse
+        
          
       }
 

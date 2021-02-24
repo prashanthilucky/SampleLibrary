@@ -31,7 +31,6 @@ public class GenerateTOTP:NSObject {
        let tOtp =  TOTP(secret: secretData, digits: 6, timeInterval: 30, algorithm: .sha1)
         
         let pin = (tOtp?.generate(time:Date()))!
-        
         return pin
         
     
